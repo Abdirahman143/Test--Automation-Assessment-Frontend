@@ -26,7 +26,7 @@ public class TestBase {
             logger.info(">>>>>Before Opening the file<<<<<<<");
             prop =new Properties();
             FileInputStream fis = new
-                    FileInputStream("src\\main\\java\\com\\Configuration\\Config.properties");
+                    FileInputStream("src/main/java/com/ncba/config/config.properties");
             prop.load(fis);
         }
         catch (IOException e){e.printStackTrace();}
@@ -64,9 +64,9 @@ public class TestBase {
     }
 
 
-    @AfterSuite
-    public static void closeBrowser(){
-        driver.close();
-    }
+//    @AfterSuite
+//    public static void closeBrowser(){
+//        driver.close();
+//    }
 }
 
