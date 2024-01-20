@@ -3,6 +3,7 @@ package com.ncba.testPages;
 import com.ncba.base.TestBase;
 import com.ncba.pages.Homepage;
 import com.ncba.pages.ProductDetailsPage;
+import com.ncba.pages.ProductPage;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -11,6 +12,7 @@ import static org.testng.Assert.assertTrue;
 public class TC8_ProductDetailsTest extends TestBase {
     ProductDetailsPage productDetailsPage;
     Homepage homepage;
+    ProductPage productPage;
 
 
     @BeforeTest(description = "Launch browser and Navigate to Url")
@@ -19,6 +21,7 @@ public class TC8_ProductDetailsTest extends TestBase {
         setUp();
        productDetailsPage =new ProductDetailsPage(driver);
         homepage=new Homepage(driver);
+        productPage=new ProductPage(driver);
 
     }
 
@@ -29,7 +32,7 @@ public class TC8_ProductDetailsTest extends TestBase {
 
     @Test(priority = 2, description = "Click on 'Products' button")
     public void clickProductButton(){
-        productDetailsPage.clickProductButton();
+        productPage.clickProductButton();
     }
 
     @Test(priority = 3, description = "Verify user is navigated to ALL PRODUCTS page successfully")

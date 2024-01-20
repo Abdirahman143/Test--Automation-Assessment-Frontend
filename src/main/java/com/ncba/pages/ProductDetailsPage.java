@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductDetailsPage {
     private WebDriver driver;
-    @FindBy(css = "a[href='/products']")
-    private WebElement productsBtn;
+
     @FindBy(xpath = "//h2[@class='title text-center' and contains(text(), 'All Products')]")
     private WebElement allProductsHeader;
     @FindBy(css = "a[href='/product_details/1']")
@@ -40,11 +39,7 @@ public class ProductDetailsPage {
         PageFactory.initElements(driver,this);
     }
 
-    //click product button
 
-    public void clickProductButton(){
-        productsBtn.click();
-    }
 
     public boolean isOnAllProductsPage() {
         try {
