@@ -9,8 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductDetailsPage {
     private WebDriver driver;
 
-    @FindBy(xpath = "//h2[@class='title text-center' and contains(text(), 'All Products')]")
-    private WebElement allProductsHeader;
+
     @FindBy(css = "a[href='/product_details/1']")
     private WebElement viewProductLink;
     @FindBy(css = "a[href='#reviews'][data-toggle='tab']")
@@ -41,13 +40,7 @@ public class ProductDetailsPage {
 
 
 
-    public boolean isOnAllProductsPage() {
-        try {
-            return allProductsHeader.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-    }
+
     public void clickViewProduct() {
         viewProductLink.click();
     }

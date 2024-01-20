@@ -37,7 +37,7 @@ public class TC8_ProductDetailsTest extends TestBase {
 
     @Test(priority = 3, description = "Verify user is navigated to ALL PRODUCTS page successfully")
     public void isUserOnAllProductsPage(){
-        assertTrue(productDetailsPage.isOnAllProductsPage(), "Not navigated to the All Products page.");
+        assertTrue(productPage.isOnAllProductsPage(), "Not navigated to the All Products page.");
     }
 
     @Test(priority = 4, description = "Click on 'View Product' of first product")
