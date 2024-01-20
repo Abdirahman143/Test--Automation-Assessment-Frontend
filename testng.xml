@@ -1,0 +1,66 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test automation Assessment -Frontend">
+    <test name="Test Case 1: Register User">
+        <classes>
+            <class name="com.ncba.testPages.TC1_RegisterUserTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 2: Login User with correct email and password">
+        <classes>
+            <class name="com.ncba.testPages.TC2_LoginUserWithCorrectEmailAndPasswordTest"></class>
+        </classes>
+    </test>
+    <test name="TTest Case 3: Login User with incorrect email and password">
+        <classes>
+            <class name="com.ncba.testPages.TC3_LoginUserWithIncorrectEmailAndPasswordTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 4: Logout User">
+        <classes>
+            <class name="com.ncba.testPages.TC4_LogoutUser"></class>
+        </classes>
+    </test>
+
+    <test name="Test Case 5: Register User with existing email">
+        <classes>
+            <class name="com.ncba.testPages.TC5_RegisterUserWithExistingEmailTest"></class>
+        </classes>
+    </test>
+
+    <test name="Test Case 6: Contact Us Form">
+        <classes>
+            <class name="com.ncba.testPages.TC6_ContactUsTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 7: Verify Test Cases Page">
+        <classes>
+            <class name="com.ncba.testPages.TC7_TestCasesTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 8: Verify All Products and product detail page">
+        <classes>
+            <class name="com.ncba.testPages.TC8_ProductDetailsTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 9: Search Product">
+        <classes>
+            <class name="com.ncba.testPages.TC9_SearchProductTest"></class>
+        </classes>
+    </test>
+
+    <test name="Test Case 10: Verify Subscription in home page">
+        <classes>
+            <class name="com.ncba.testPages.TC10_SubscriptionTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 11: Verify Subscription in Cart page">
+        <classes>
+            <class name="com.ncba.testPages.TC11_SubscriptionCartTest"></class>
+        </classes>
+    </test>
+    <test name="Test Case 12: Add Products in Cart">
+        <classes>
+            <class name="com.ncba.testPages.TC12_ProductsCartTest"></class>
+        </classes>
+    </test>
+</suite>

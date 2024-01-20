@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -64,9 +65,9 @@ public class TestBase {
     }
 
 
-//    @AfterSuite
-//    public static void closeBrowser(){
-//        driver.close();
-//    }
+    @AfterTest
+    public static void closeBrowser(){
+        driver.close();
+    }
 }
 
