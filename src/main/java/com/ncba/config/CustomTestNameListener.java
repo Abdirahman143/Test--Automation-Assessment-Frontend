@@ -1,2 +1,4 @@
-package com.ncba.config;public class CustomTestNameListener {
+package com.ncba.config;
+
+public class CustomTestNameListener {
 }

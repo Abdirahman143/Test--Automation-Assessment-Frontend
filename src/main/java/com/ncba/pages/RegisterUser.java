@@ -54,12 +54,12 @@ public class RegisterUser {
     private WebElement lastName;
     @FindBy(css = "input[data-qa='company']")
     private WebElement company;
-    @FindBy(css = "input[data-qa='address1']")
+    @FindBy(css = "input[data-qa='address']")
     private WebElement address1;
     @FindBy(css = "input[data-qa='address2']")
     private WebElement address2;
 
-    @FindBy(css = "input[data-qa='country']")
+    @FindBy(xpath = "//select[@data-qa='country']\n")
     private WebElement countryDropDown;
     @FindBy(css = "input[data-qa='state']")
     private WebElement state;
@@ -154,16 +154,18 @@ public class RegisterUser {
     }
 
     //  select date of birth
-    public void selectDateOfBirth(String day, String month, String year) {
+    public void selectDateOfBirth(String day, String month, String year) throws InterruptedException {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.visibilityOf(daysDropdown));
         new Select(daysDropdown).selectByValue(day);
 
         wait.until(ExpectedConditions.visibilityOf(monthsDropdown));
+
         new Select(monthsDropdown).selectByValue(month);
 
         wait.until(ExpectedConditions.visibilityOf(yearsDropdown));
+
         new Select(yearsDropdown).selectByValue(year);
     }
 
@@ -188,17 +190,46 @@ public class RegisterUser {
                                     String state, String city, String zipcode,
                                     String mobileNumber) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.firstName.clear();
+        this.firstName.click();
         this.firstName.sendKeys(firstName);
+
+        this.lastName.clear();
+        this.lastName.click();
         this.lastName.sendKeys(lastName);
+
+        this.company.clear();
+        this.company.click();
         this.company.sendKeys(company);
+
+        this.address1.clear();
+        this.address1.click();
         this.address1.sendKeys(address1);
+
+        this.address2.clear();
+        this.address2.click();
         this.address2.sendKeys(address2);
 
-        wait.until(ExpectedConditions.visibilityOf(countryDropDown));
-        new Select(countryDropDown).selectByVisibleText(country);
+
+
+        wait.until(ExpectedConditions.elementToBeClickable(countryDropDown));
+        countryDropDown.click();
+        new Select(countryDropDown).selectByValue(country);
+
+        this.state.clear();
+        this.state.click();
         this.state.sendKeys(state);
+
+        this.city.clear();
+        this.city.click();
         this.city.sendKeys(city);
+
+        this.zipcode.clear();
+        this.zipcode.click();
         this.zipcode.sendKeys(zipcode);
+
+        this.mobileNumber.clear();
+        this.mobileNumber.click();
         this.mobileNumber.sendKeys(mobileNumber);
     }
 
