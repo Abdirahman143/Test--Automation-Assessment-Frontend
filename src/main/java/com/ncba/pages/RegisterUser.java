@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-public class RegisterUser {
+public class RegisterUser{
     private WebDriver driver;
 
     @FindBy(xpath = "//a[@href='/' and contains(., 'Home')]\n")
@@ -86,6 +86,8 @@ public class RegisterUser {
     private WebElement deleteAccountLink;
     @FindBy(xpath = "//b[text()='Account Deleted!']")
     private WebElement accountDeletedText;
+    @FindBy(xpath = "//p[contains(text(), 'Email Address already exist!') and contains(@style, 'color: red;')]")
+    private WebElement emailExistsErrorMessage;
 
     public RegisterUser (WebDriver driver){
         this.driver = driver;
@@ -100,6 +102,8 @@ public class RegisterUser {
             return false;
         }
     }
+
+
 
 
     // 'Sign Up / Login' button
@@ -271,4 +275,15 @@ public class RegisterUser {
             return false;
         }
     }
+
+    //Register with existing email
+
+    public boolean isEmailExistsErrorMessageVisible() {
+        try {
+            return emailExistsErrorMessage.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
 }

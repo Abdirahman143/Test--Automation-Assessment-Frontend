@@ -64,9 +64,9 @@ public class TestBase {
     }
 
 
-    @AfterSuite
-    public static void closeBrowser(){
-        driver.close();
-    }
+//    @AfterSuite
+//    public static void closeBrowser(){
+//        driver.close();
+//    }
 }
 

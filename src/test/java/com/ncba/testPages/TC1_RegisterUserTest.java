@@ -2,13 +2,15 @@ package com.ncba.testPages;
 
 import com.ncba.base.TestBase;
 import com.ncba.pages.RegisterUser;
+import com.ncba.utilityTest.CustomTestListener;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.testng.Assert.*;
-
-public class TestCaseRegisterUser extends TestBase {
+@Listeners(CustomTestListener.class)
+public class TC1_RegisterUserTest extends TestBase {
     private RegisterUser registerUser;
 
     @BeforeTest(description = "Launch browser and Navigate to Url")
