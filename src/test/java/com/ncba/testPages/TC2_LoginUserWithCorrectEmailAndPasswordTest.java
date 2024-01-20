@@ -1,7 +1,12 @@
 package com.ncba.testPages;
 
+import com.aventstack.extentreports.Status;
 import com.ncba.base.TestBase;
 import com.ncba.pages.LoginUser;
+import com.ncba.utilityTest.ExtentManager;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -14,6 +19,7 @@ public class TC2_LoginUserWithCorrectEmailAndPasswordTest extends TestBase {
 
     @BeforeTest(description = "Launch browser and Navigate to Url")
     public void setUpBrowserAndLoadHomePage(){
+
         browser();
         setUp();
         loginUser= new LoginUser(driver);
@@ -48,5 +54,8 @@ public class TC2_LoginUserWithCorrectEmailAndPasswordTest extends TestBase {
     public void testLoggedInTextVisibility() {
         assertThat(loginUser.isLoggedInTextVisible()).isTrue();
     }
+
+
+
 
 }

@@ -68,6 +68,16 @@
       <version>2.0M10</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version> <!-- Use the latest version -->
+    </dependency>
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version> <!-- Check for the latest version -->
+    </dependency>
 
   </dependencies>
   <build>
