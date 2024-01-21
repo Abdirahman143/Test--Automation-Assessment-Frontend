@@ -3,7 +3,9 @@ package com.ncba.base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,11 +43,15 @@ public class TestBase {
             switch (browser.toLowerCase()){
                 case "edge":
                     WebDriverManager.edgedriver().setup();
+                    EdgeOptions edgeOptions=new EdgeOptions();
+                    edgeOptions.addArguments("--headless"); //Run in headless
                     driver = new EdgeDriver();
                     break;
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless"); // Run in headless mode
+                    driver = new ChromeDriver(options);
                     break;
                 case "ff":
                 case "firefox":
