@@ -37,7 +37,7 @@ public class TC12_ProductsCartTest extends TestBase {
     }
 
     @Test(priority = 3, description = "Hover over first product and click 'Add to cart'")
-    public void hoverOverFirstProductAndAddToCart() {
+    public void hoverOverFirstProductAndAddToCart() throws InterruptedException {
         productsCart.hoverOverFirstProductAndAddToCart();
     }
 
@@ -47,7 +47,7 @@ public class TC12_ProductsCartTest extends TestBase {
     }
 
     @Test(priority = 5,description = "Hover over second product and click 'Add to cart'")
-    public void hoverOverSecondProductAndAddToCart() {
+    public void hoverOverSecondProductAndAddToCart() throws InterruptedException {
         productsCart.hoverOverFirstProductAndAddToCart();
     }
 

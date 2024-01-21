@@ -41,9 +41,10 @@ public class ProductsCart {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver,this);
     }
-    public void hoverOverFirstProductAndAddToCart() {
+    public void hoverOverFirstProductAndAddToCart() throws InterruptedException {
         action.moveToElement(firstProduct).perform();
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
+        Thread.sleep(5);
         addToCartButton.click();
     }
 
