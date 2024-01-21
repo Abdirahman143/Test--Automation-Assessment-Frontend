@@ -44,7 +44,6 @@ public class ProductsCart {
     public void hoverOverFirstProductAndAddToCart() throws InterruptedException {
         action.moveToElement(firstProduct).perform();
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
-        Thread.sleep(5);
         addToCartButton.click();
     }
 
