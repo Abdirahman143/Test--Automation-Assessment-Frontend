@@ -67,7 +67,8 @@ public class TestBase {
 
     @AfterTest
     public static void closeBrowser(){
-        driver.close();
+
+        driver.quit();
     }
 }
 
